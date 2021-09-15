@@ -2,6 +2,14 @@ Rails.application.routes.draw do
 
   devise_for :admins
    namespace :admin do
-      get '/' => '/admin/homes#top'
+      get '/' => 'homes#top'
+
+      get '/genres' => 'genres#index'
+
+      post '/genres' => 'genres#create'
+
+      get '/genres/:id/edit' => 'genres#edit' ,as: 'edit_genres'
+
+      patch '/genres/:id/update' => 'genres#update',as: 'update_genres'
    end
 end
