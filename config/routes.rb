@@ -11,5 +11,8 @@ Rails.application.routes.draw do
       get '/genres/:id/edit' => 'genres#edit' ,as: 'edit_genres'
 
       patch '/genres/:id/update' => 'genres#update',as: 'update_genres'
+
+      resources :items , except:[:destroy]
+
    end
 end
