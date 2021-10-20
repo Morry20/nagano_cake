@@ -14,5 +14,7 @@ Rails.application.routes.draw do
 
       resources :items , except:[:destroy]
 
+      resources :customers , except:[:new,:create,:destroy]
+
    end
 end
