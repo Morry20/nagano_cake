@@ -1,2 +1,23 @@
-<span class="h3 bg-secondary">注文履歴一覧</span>
+<div class="row">
 
+  <span class="h3 bg-light mt-3  mb-3">注文履歴一覧</span>
+
+  <table class="table col-12">
+    <thead>
+      <tr class="bg-light">
+        <th>購入日時</th>
+        <th>購入者</th>
+        <th>注文個数</th>
+      </tr>
+    </thead>
+
+    <thead><% @orders.each do |order| %>
+      <tr class="">
+        <td><%= order.created_at %></td>
+        <td><%= order.name %></td>
+        <td><%= order.order_details.amount %></td>
+      </tr><% end %>
+    </thead>
+  </table>
+
+</div>
