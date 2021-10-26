@@ -16,5 +16,7 @@ Rails.application.routes.draw do
 
       resources :customers , except:[:new,:create,:destroy]
 
+      resources :orders , only:[:show]
+
    end
 end

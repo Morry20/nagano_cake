@@ -1,0 +1,45 @@
+<div class="row">
+
+  <span class="h3 bg-light mt-3  mb-3">注文履歴詳細</span>
+
+  <div class="col-12 mt-3 mb-3">
+    <p><b>購入者</b>　　　<%= @order.name %></p>
+    <p><b>注文日</b>　　　<%= @order.created_at %></p>
+    <p><b>配送先</b>　　　<%= @order.postal_code %><%= @order.address %></p>
+    <p><b>支払方法</b>　　　<%= @order.payment_method %></p>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <table class="table col-9">
+    <thead>
+      <tr class="bg-light">
+        <th>商品名</th>
+        <th>単価</th>
+        <th>数量</th>
+        <th>小計</th>
+      </tr>
+    </thead>
+
+    <% @total_price = 0 %>
+
+    <thead><% @order_detail.each do |order_detail| %>
+      <tr>
+        <td><%= order.order_detail.item.name %></td>
+        <td><%= order.order_detail.price %></td>
+        <td><%= order.order_detail.amount %></td>
+        <td><%= order.order_detail.price*order.order_detail.amount %></td>
+        <% @total_price += order.order_detail.price*order.order_detail.amount %>
+      </tr><% end %>
+    </thead>
+  </table>
+
+  <div class="col-3">
+    <p><b>商品合計</b>　　　<%= @total_price %></p>
+    <p><b>送料</b>　　　<%= @order.shipping_cost %></p>
+    <p><b>請求金額合計</b>　　　<%= @total_price+@order.shipping_cost %></p>
+  </div>
+
+</div>
