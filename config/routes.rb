@@ -18,5 +18,14 @@ Rails.application.routes.draw do
 
       resources :orders , only:[:show]
 
+
    end
+
+  devise_for :customers
+    scope module: :public do
+      get '/' => 'homes#top'
+      
+      get '/about' => 'homes#about'
+  end
+
 end

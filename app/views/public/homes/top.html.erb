@@ -1,0 +1,34 @@
+<div class="row">
+  <table class="table col-2 m-3">
+    <thead>
+      <tr>
+        <th>ジャンル検索</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><% @genres.each do |genre| %>
+        <td><%= genre.name %></td>
+      </tr><% end %>
+    </tbody>
+  </table>
+
+  <div class="col-9 m-3">
+    <p class="mx-auto">ようこそ、ながのCAKEへ！<br>
+    このサイトは、ケーキ販売のECサイトになります。<br>
+    会員でない方も商品の閲覧はできますが、<br>
+    購入には会員登録が必要になります。
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-10 offset-2">
+    <div><% @items.each do |item| %>
+      <ul class="col-3 m-3 d-inline-block list-inline">
+        <li><%= attachment_image_tag item, :image , :fill, 150, 150, format: 'jpeg',fallback: "no_image.jpg" %></li>
+        <li><%= item.name %></li>
+        <li><%= item.price %></li>
+      </ul><% end %>
+    </div>
+  </div>
+</div>
