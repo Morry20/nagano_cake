@@ -5607,3 +5607,138 @@ Processing by Public::CustomersController#edit as HTML
 Completed 200 OK in 157ms (Views: 153.4ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-10-31 07:14:33 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 524ms (Views: 492.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/public/customers" for 117.108.18.169 at 2021-10-31 07:14:45 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0zZ1y/wEXTtARSEEcfuGqcBglF42fvZvRAfwsONPDLPy9QHxR7xDQJ9RXWYnRHXwVavl05odh8ULoSMTycxluQ==", "customer"=>{"full_name"=>"森本圭亮", "full_name_kana"=>"モリモトケイスケ", "postal_code"=>"622-0231", "address"=>"32-1", "telephone_number"=>"09098646322", "email"=>"ku.l.taf54@gmail.com"}, "commit"=>"編集内容を保存"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:11
+Unpermitted parameters: :full_name, :full_name_kana
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:12
+  [1m[36mCustomer Update (2.1ms)[0m  [1m[33mUPDATE "customers" SET "postal_code" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["postal_code", "622-0231"], ["updated_at", "2021-10-31 07:14:45.606188"], ["id", 2]]
+  ↳ app/controllers/public/customers_controller.rb:12
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:12
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 11.1ms)
+
+
+  
+NoMethodError (undefined method `customers_my_page_path' for #<Public::CustomersController:0x00007f05d0080598>
+Did you mean?  customer_password_path):
+  
+app/controllers/public/customers_controller.rb:13:in `update'
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-10-31 07:15:08 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 137ms (Views: 118.6ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/public/customers" for 117.108.18.169 at 2021-10-31 07:15:10 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NjkAvBlTmJ4bADJ71wsvEQQQKF9iBq8l5dHLgqj7MFEX+nSGouuG5cQUThmBtNxIkdtZ0s5l3o+qdxghgnhZWw==", "customer"=>{"full_name"=>"森本圭亮", "full_name_kana"=>"モリモトケイスケ", "postal_code"=>"622-0231", "address"=>"32-1", "telephone_number"=>"09098646322", "email"=>"ku.l.taf54@gmail.com"}, "commit"=>"編集内容を保存"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:11
+Unpermitted parameters: :full_name, :full_name_kana
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:12
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `publiccustomers_my_page_path' for #<Public::CustomersController:0x00007f05ddda63a0>
+Did you mean?  public_customers_my_page_path
+               public_customers_my_page_url):
+  
+app/controllers/public/customers_controller.rb:13:in `update'
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-10-31 07:15:21 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 171ms (Views: 146.5ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/public/customers" for 117.108.18.169 at 2021-10-31 07:15:22 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H1gFotqmSeYCX6IN380fZLf/NV4jm8bhUUtrFNoTpQc+m3GYYR5Xnd1L3m+Jcuw9IjRE04/4t0se7bi38JDMDQ==", "customer"=>{"full_name"=>"森本圭亮", "full_name_kana"=>"モリモトケイスケ", "postal_code"=>"622-0231", "address"=>"32-1", "telephone_number"=>"09098646322", "email"=>"ku.l.taf54@gmail.com"}, "commit"=>"編集内容を保存"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:11
+Unpermitted parameters: :full_name, :full_name_kana
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:12
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/public/customers/my_page.2
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/public/customers/my_page.2" for 117.108.18.169 at 2021-10-31 07:15:22 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:3
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 88ms (Views: 83.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-10-31 07:15:25 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 104ms (Views: 100.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/public/customers" for 117.108.18.169 at 2021-10-31 07:15:29 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PF8jRqlSfvfmR5d8VYKFuqTrTNHUGJmFgzDMq2NKnoHQ6Evjb/4RusTQ74orzln4gRUnXxHGYKccMQHmN8HTdg==", "customer"=>{"full_name"=>"森本圭亮", "full_name_kana"=>"モリモトケイスケ", "postal_code"=>"633-0231", "address"=>"32-1", "telephone_number"=>"09098646322", "email"=>"ku.l.taf54@gmail.com"}, "commit"=>"編集内容を保存"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:11
+Unpermitted parameters: :full_name, :full_name_kana
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:12
+  [1m[36mCustomer Update (0.2ms)[0m  [1m[33mUPDATE "customers" SET "postal_code" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["postal_code", "633-0231"], ["updated_at", "2021-10-31 07:15:29.932317"], ["id", 2]]
+  ↳ app/controllers/public/customers_controller.rb:12
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:12
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/public/customers/my_page.2
+Completed 302 Found in 21ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/public/customers/my_page.2" for 117.108.18.169 at 2021-10-31 07:15:30 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:3
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 90ms (Views: 82.8ms | ActiveRecord: 0.1ms)
+
+
