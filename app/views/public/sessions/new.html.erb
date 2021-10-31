@@ -26,10 +26,15 @@
   <% end %>
 
   <div class="actions row">
-    <div class="text-center">
-      <%= f.submit "Log in" %>
+    <div class="col-6 text-center">
+      <%= f.submit "ログイン",class: 'btn btn-primary center-block' %>
     </div>
   </div>
 <% end %>
 
+<div class="row">
+  <span class="h4 bg-light m-3">会員登録がお済でない方,パスワードをお忘れの方↓</span>
+</div>
+
 <%= render "public/shared/links" %>
+

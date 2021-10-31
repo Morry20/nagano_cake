@@ -33,6 +33,16 @@ Rails.application.routes.draw do
 
       get '/about' => 'homes#about'
 
+      get 'public/customers/my_page' => 'customers#show'
+
+      get 'public/customers/edit' => 'customers#edit'
+
+      patch 'public/customers' => 'customers#update'
+
+      get 'public/customers/unsubscribe' => 'customers#unsubscribe'
+
+      patch 'public/customers/withdraw' => 'customers#withdraw'
+
   end
 
 end

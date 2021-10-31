@@ -1,0 +1,40 @@
+<div class="row m-3">
+  <span class="h3 bg-light">会員情報編集</span>
+</div>
+
+<%= form_with model: @customer, url:public_customers_path, local:true do |f| %>
+
+<div class="row">
+  <p class="col-2">氏名</p>
+  <%= f.text_field :full_name,class:"form-control col-4" %>
+</div>
+
+<div class="row">
+  <p class="col-2">フリガナ</p>
+  <%= f.text_field :full_name_kana,class:"form-control col-4" %>
+</div>
+
+<div class="row">
+  <p class="col-2">郵便番号</p>
+  <%= f.text_field :postal_code,class:"form-control col-4" %>
+</div>
+
+<div class="row">
+  <p class="col-2">住所</p>
+  <%= f.text_field :address,class:"form-control col-4" %>
+</div>
+
+<div class="row">
+  <p class="col-2">電話番号</p>
+  <%= f.text_field :telephone_number,class:"form-control col-4" %>
+</div>
+
+<div class="row">
+  <p class="col-2">メールアドレス</p>
+  <%= f.text_field :email,class:"form-control col-4" %>
+</div>
+
+
+  <%= f.submit "編集内容を保存",class:"btn btn-success btn-lg m-4"%>
+
+<% end %>
