@@ -5742,3 +5742,1215 @@ Processing by Public::CustomersController#show as
 Completed 200 OK in 90ms (Views: 82.8ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for 117.108.18.169 at 2021-11-01 09:20:11 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:38
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:55
+  Rendered public/homes/top.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 785ms (Views: 757.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-01 09:20:12 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:38
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:55
+  Rendered public/homes/top.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 173ms (Views: 169.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/attachments/3d1e7fc3d6488185468d3ccc19ca5256540aca1d/store/fill/150/150/4c15df51631abfb9b6b96b5c4c84a619474b473939a1c4ca3eb1d92484f7/image.jpeg" for 117.108.18.169 at 2021-11-01 09:20:12 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-01 09:20:13 +0000] GET "/3d1e7fc3d6488185468d3ccc19ca5256540aca1d/store/fill/150/150/4c15df51631abfb9b6b96b5c4c84a619474b473939a1c4ca3eb1d92484f7/image.jpeg" 200 162.5ms
+
+Started GET "/customers/sign_up" for 117.108.18.169 at 2021-11-01 09:20:21 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#new as HTML
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.5ms)
+  Rendered public/shared/_links.html.erb (1.0ms)
+  Rendered public/registrations/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 125ms (Views: 104.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/sign_in" for 117.108.18.169 at 2021-11-01 09:20:25 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (1.1ms)
+  Rendered public/sessions/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 121ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 117.108.18.169 at 2021-11-01 09:20:31 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UFFCYlgckeMNNnQWeG7VLbeGcV7eQXJS4Du2LCkkYyaPJJ0wnDKffEJcLTGkj9lQlq3sXWiDFSJryB27MzxvUg==", "customer"=>{"email"=>"ku.l.taf54@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `customer' for #<Public::SessionsController:0x00007f7a115f98c0>):
+  
+app/controllers/public/sessions_controller.rb:32:in `reject_inactive_customer'
+Started POST "/customers/sign_in" for 117.108.18.169 at 2021-11-01 09:21:12 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y4FYuS6w3BqOSKYbGOGJN27T0AoqSsLgOLyrOICj8RkynLzwjV6uJ4DDMUt4hJyuX49aVNqmOLJZWeNK3dIH1g==", "customer"=>{"email"=>"ku.l.taf54@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:32
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 837ms (ActiveRecord: 1.3ms)
+
+
+  
+NameError (undefined local variable or method `customers_my_page_path' for #<Public::SessionsController:0x00007f7a11a66e30>
+Did you mean?  customer_password_path):
+  
+app/controllers/application_controller.rb:6:in `after_sign_in_path_for'
+Started POST "/customers/sign_in" for 117.108.18.169 at 2021-11-01 09:25:49 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y4FYuS6w3BqOSKYbGOGJN27T0AoqSsLgOLyrOICj8RkynLzwjV6uJ4DDMUt4hJyuX49aVNqmOLJZWeNK3dIH1g==", "customer"=>{"email"=>"ku.l.taf54@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:32
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/public/customers/my_page
+Completed 302 Found in 636ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/public/customers/my_page" for 117.108.18.169 at 2021-11-01 09:25:50 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:3
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 101ms (Views: 93.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-11-01 09:25:55 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 124ms (Views: 117.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-11-01 09:26:50 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 110ms (Views: 91.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-11-01 09:27:18 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 106ms (Views: 102.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-11-01 09:27:23 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 89ms (Views: 85.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:27:31 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 105ms (Views: 98.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:28:56 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 101ms (Views: 95.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:29:36 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 114ms (Views: 106.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:30:04 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 169ms (Views: 157.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:30:06 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 106ms (Views: 99.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:31:54 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 99ms (Views: 93.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:34:19 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 111ms (Views: 104.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:34:56 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 120ms (Views: 97.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:35:07 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 102ms (Views: 96.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-01 09:37:11 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:38
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:55
+  Rendered public/homes/top.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 126ms (Views: 117.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:37:17 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 128ms (Views: 117.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:42:31 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 112ms (Views: 106.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:42:41 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 104ms (Views: 96.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:43:42 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 112ms (Views: 106.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:44:09 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 92ms (Views: 87.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/public/customers/withdraw.2" for 117.108.18.169 at 2021-11-01 09:44:15 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#withdraw as 
+  Parameters: {"authenticity_token"=>"DAWwJHMKo6HrlP+QH2C8XKM2QDWch1yXo+XiVey2rDcwjSVmGv7v0a5dtMj0zMkqw9Jvde0IgwNMtxupdx9pfg=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+  [1m[36mCustomer Update (2.3ms)[0m  [1m[33mUPDATE "customers" SET "is_deleted" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["is_deleted", 1], ["updated_at", "2021-11-01 09:44:15.087886"], ["id", 2]]
+  ↳ app/controllers/public/customers_controller.rb:22
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 8.9ms)
+
+
+  
+NameError (undefined local variable or method `root_path' for #<Public::CustomersController:0x00007f7a12b2fdc0>):
+  
+app/controllers/public/customers_controller.rb:24:in `withdraw'
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:44:59 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ec2-user/environment/nagano_cake/config/routes.rb:32: syntax error, unexpected tIDENTIFIER, expecting end
+      get '/' => 'homes#top' as 'root_path'
+                             ^~
+/home/ec2-user/environment/nagano_cake/config/routes.rb:48: syntax error, unexpected end, expecting end-of-input):
+  
+config/routes.rb:32: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:48: syntax error, unexpected end, expecting end-of-input
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-11-01 09:45:48 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 130ms (Views: 111.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:45:51 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 101ms (Views: 94.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/public/customers/withdraw.2" for 117.108.18.169 at 2021-11-01 09:45:53 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#withdraw as 
+  Parameters: {"authenticity_token"=>"iymIAgf63zbXOe4W/Ig1WdygLU/cb21WZLo9ZmHXi1K3oR1Abg6TRpLwpU4XJEAvvEQCD63gssKL6MSa+n5OGw=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (undefined local variable or method `root_path' for #<Public::CustomersController:0x00007f7a120b3040>
+Did you mean?  root_path_url):
+  
+app/controllers/public/customers_controller.rb:24:in `withdraw'
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:47:04 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 131ms (Views: 109.1ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/public/customers/withdraw.2" for 117.108.18.169 at 2021-11-01 09:47:05 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#withdraw as 
+  Parameters: {"authenticity_token"=>"67PFBMK9Hgmzgq81XiEpZJofFlWWprS6FADxpjW7dcrXO1BGq0lSefZL5G21jVwS+vs5Fecpay77UgharhKwgw=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-01 09:47:05 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:38
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:55
+  Rendered public/homes/top.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 122ms (Views: 112.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/customers/sign_up" for 117.108.18.169 at 2021-11-01 09:47:18 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#new as HTML
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.5ms)
+  Rendered public/shared/_links.html.erb (0.8ms)
+  Rendered public/registrations/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 121ms (Views: 120.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 117.108.18.169 at 2021-11-01 09:47:22 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.8ms)
+  Rendered public/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 92ms (Views: 90.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 117.108.18.169 at 2021-11-01 09:47:28 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uwQ0Fy8sY3JLzPMJzcNCXQpg/xsZPVafnEGSkHIeK9VrmTPz13DIYqIVB5WWGSABrkmfw7gRwXiDnFIe8asWLw==", "customer"=>{"email"=>"ku.l.taf54@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:32
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/public/customers/my_page
+Completed 302 Found in 628ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/public/customers/my_page" for 117.108.18.169 at 2021-11-01 09:47:29 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:3
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 102ms (Views: 97.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-11-01 09:47:42 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 90ms (Views: 86.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:47:44 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 117ms (Views: 111.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/public/customers/withdraw.2" for 117.108.18.169 at 2021-11-01 09:47:46 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#withdraw as 
+  Parameters: {"authenticity_token"=>"Jg1iYJnO+FnODsUh4Kt0ADfbKYG47w66C/yWyq32h9kBlqIc71K2luXdWfzU9zghquLv4rUJqTy1c1m5QPcYEw=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-01 09:47:47 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:38
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:55
+  Rendered public/homes/top.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 91ms (Views: 88.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/sign_up" for 117.108.18.169 at 2021-11-01 09:47:54 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#new as HTML
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.5ms)
+  Rendered public/shared/_links.html.erb (0.8ms)
+  Rendered public/registrations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 94ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 117.108.18.169 at 2021-11-01 09:47:56 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.8ms)
+  Rendered public/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 102ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 117.108.18.169 at 2021-11-01 09:48:03 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZuHPN6dp9IZpnkJjQvucfAfpIfKowd6tc9sQtc+ofMwY0kQhZSBYw0zKhjo39N7QLLllPVIfOTSMD6NdKkmNTg==", "customer"=>{"email"=>"ku.l.taf54@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:32
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/public/customers/my_page
+Completed 302 Found in 613ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/public/customers/my_page" for 117.108.18.169 at 2021-11-01 09:48:04 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:3
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 94ms (Views: 90.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-11-01 09:48:55 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 116ms (Views: 113.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:48:58 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 98ms (Views: 91.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/my_page.2" for 117.108.18.169 at 2021-11-01 09:49:01 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:3
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 109ms (Views: 103.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-11-01 09:57:25 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 117ms (Views: 113.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/public/customers/unsubscribe.2" for 117.108.18.169 at 2021-11-01 09:57:29 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as 
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 118ms (Views: 112.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/public/customers/withdraw.2" for 117.108.18.169 at 2021-11-01 09:57:34 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#withdraw as 
+  Parameters: {"authenticity_token"=>"fwpQdDdFrezPC9Z69rsogfgvWTsnMM2OPnniME/0cUipiI1nHIUzLnBAyJPX8negXf8ESWXQe8SmiNvaluC/ew=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-01 09:57:34 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:38
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:55
+  Rendered public/homes/top.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 94ms (Views: 90.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/sign_up" for 117.108.18.169 at 2021-11-01 10:05:17 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::RegistrationsController#new as HTML
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.4ms)
+  Rendered public/shared/_links.html.erb (0.8ms)
+  Rendered public/registrations/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 595ms (Views: 572.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:05:50 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (1.1ms)
+  Rendered public/sessions/new.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 148ms (Views: 147.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:05:57 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K7VJDcb3q0Z6gfZiAUEiXf+nFsn6i7toPhasWKcMwelQWr5NTUeajKf0IQVyfj5ukFw16XzNWhsf4kzq5Ry6lA==", "customer"=>{"email"=>"ku.l.taf54@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:32
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/public/customers/my_page
+Completed 302 Found in 634ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/public/customers/my_page" for 117.108.18.169 at 2021-11-01 10:05:58 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:3
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 93ms (Views: 89.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-11-01 10:06:07 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 105ms (Views: 100.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe" for 117.108.18.169 at 2021-11-01 10:06:09 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 88ms (Views: 84.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/public/customers/withdraw" for 117.108.18.169 at 2021-11-01 10:06:11 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#withdraw as HTML
+  Parameters: {"authenticity_token"=>"pvW6xYbTS76pT0Ucx8uJiDPOWLS2DyeweYYSVYFjgo1HXnCt0s+hq7kMgXYOJAAJ42diFpaMPTnZ/zHqoCCkqA=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:22
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-01 10:06:11 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:38
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:55
+  Rendered public/homes/top.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 145ms (Views: 119.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-01 10:11:38 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:38
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:55
+  Rendered public/homes/top.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 666ms (Views: 648.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/customers/sign_up" for 117.108.18.169 at 2021-11-01 10:11:43 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#new as HTML
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (1.1ms)
+  Rendered public/shared/_links.html.erb (1.7ms)
+  Rendered public/registrations/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 171ms (Views: 146.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:11:45 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (2.0ms)
+  Rendered public/sessions/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 175ms (Views: 173.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:11:51 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qpbrzWreJoVr9VmyzkPrU2C7G+Flo5gceVXNWiRH2UHkDZMnjsoiQ4ZA7IxcAe2xIVk/mVmpYhyR+6VWrm8m9g==", "customer"=>{"email"=>"ku.l.taf54@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:32
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/public/customers/my_page
+Completed 302 Found in 617ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/public/customers/my_page" for 117.108.18.169 at 2021-11-01 10:11:52 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:3
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 112ms (Views: 108.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-11-01 10:11:56 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 96ms (Views: 91.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe" for 117.108.18.169 at 2021-11-01 10:11:58 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 118ms (Views: 114.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/public/customers/withdraw" for 117.108.18.169 at 2021-11-01 10:12:00 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#withdraw as HTML
+  Parameters: {"authenticity_token"=>"6XTn8xcQMltUurFxXdJT5GBh691d5LHGazk1aQlDMhawGpimOlYWIAwJzUXklMDyPdHx+tl7qo3u2ydO1e1mlw=="}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ (pry):1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):2
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:23
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 565664ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/public/customers/unsubscribe" for 117.108.18.169 at 2021-11-01 10:21:41 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::CustomersController#unsubscribe as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 574ms (Views: 550.1ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/public/customers/withdraw" for 117.108.18.169 at 2021-11-01 10:21:45 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#withdraw as HTML
+  Parameters: {"authenticity_token"=>"DaWu36dyV0SnLGTXOMGOgBPYAk1ZazAGiRj5Yb3EjQxUy9GKijRzP/+fGOOBhx2WTmgYat30K00M+utGYWrZjQ=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ (pry):1
+Completed 400 Bad Request in 80118ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: customer):
+  
+app/controllers/public/customers_controller.rb:37:in `delete_params'
+app/controllers/public/customers_controller.rb:24:in `withdraw'
+Started GET "/public/customers/unsubscribe" for 117.108.18.169 at 2021-11-01 10:23:27 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::CustomersController#unsubscribe as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 567ms (Views: 542.7ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/customers/sign_out" for 117.108.18.169 at 2021-11-01 10:23:32 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/H8NCT+o/Ev0A86IdaFhtvG7P6wE5PkVP7sErastVX2lEXJcEu7YMKywsrzM5/KgrAsli4B74l66WRaKd4MB/A=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 13ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-01 10:23:32 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:38
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:55
+  Rendered public/homes/top.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 176ms (Views: 165.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/customers/sign_up" for 117.108.18.169 at 2021-11-01 10:23:38 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#new as HTML
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.5ms)
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/registrations/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 102ms (Views: 101.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 117.108.18.169 at 2021-11-01 10:24:10 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DMwFfbAAFmqso6mxH5Xop0C+Lfd9goWH/sGWmIRG5pEQU5AeWncZAKbACcYlm0dLynBNd2JI9FZTnkvg1ypv9A==", "customer"=>{"last_name"=>"森本", "first_name"=>"圭亮", "last_name_kana"=>"モリモト", "first_name_kana"=>"ケイスケ", "email"=>"ku.l.taf54@gmail.com", "postal_code"=>"633-0231", "address"=>"32-1", "telephone_number"=>"0909864632", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "ku.l.taf54@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.7ms)
+  Rendered public/shared/_links.html.erb (0.8ms)
+  Rendered public/registrations/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 424ms (Views: 100.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/customers" for 117.108.18.169 at 2021-11-01 10:24:39 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vs2YdkGu2Ma6lKm34QED68kDg8DkvHTD4wHEtowmcltKUg0Vq9nXrLD3CcDbD6wHQ83jQPt2BRJOXhnO30r7Pg==", "customer"=>{"last_name"=>"森本", "first_name"=>"圭亮", "last_name_kana"=>"モリモト", "first_name_kana"=>"ケイスケ", "email"=>"a@gmail.com", "postal_code"=>"633-0231", "address"=>"32-1", "telephone_number"=>"0909864632", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "a@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.8ms)
+  Rendered public/shared/_links.html.erb (0.7ms)
+  Rendered public/registrations/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 411ms (Views: 97.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/customers" for 117.108.18.169 at 2021-11-01 10:25:32 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y/sk2h6n5hdmL4uzdba/8EvSdvLSk3298KlDIFxvZJnXZLG59NDpfWxMK8RPuBAcwRwWcs1ZDGxd9p5YDwPt/A==", "customer"=>{"last_name"=>"森本", "first_name"=>"圭亮", "last_name_kana"=>"モリモト", "first_name_kana"=>"ケイスケ", "email"=>"b@gmail.com", "postal_code"=>"633-0231", "address"=>"32-1", "telephone_number"=>"0909864632", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "b@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mCustomer Create (1.8ms)[0m  [1m[32mINSERT INTO "customers" ("email", "encrypted_password", "last_name", "first_name", "last_name_kana", "first_name_kana", "postal_code", "address", "telephone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "b@gmail.com"], ["encrypted_password", "$2a$12$kcCqF5q9AfJza5.P.dFl4O3jiWrel2YnHojULpabBgrw6gOj2.A7K"], ["last_name", "森本"], ["first_name", "圭亮"], ["last_name_kana", "モリモト"], ["first_name_kana", "ケイスケ"], ["postal_code", "633-0231"], ["address", "32-1"], ["telephone_number", "0909864632"], ["created_at", "2021-11-01 10:25:32.485329"], ["updated_at", "2021-11-01 10:25:32.485329"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/public/customers/my_page
+Completed 302 Found in 326ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/public/customers/my_page" for 117.108.18.169 at 2021-11-01 10:25:32 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:3
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 101ms (Views: 97.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/edit" for 117.108.18.169 at 2021-11-01 10:25:38 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:7
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 85ms (Views: 81.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/public/customers/unsubscribe" for 117.108.18.169 at 2021-11-01 10:25:40 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#unsubscribe as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 121ms (Views: 116.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/public/customers/withdraw" for 117.108.18.169 at 2021-11-01 10:25:43 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#withdraw as HTML
+  Parameters: {"authenticity_token"=>"Mt+GW1O9wcnc8J6txHrkJs95jIjJeKmPvrlRih8B+OkuQBM4ucrOo9aTPtr+dEvKRbfsCNay2F4T5ozyTG1xjA=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ (pry):1
+Completed 400 Bad Request in 287555ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: customer):
+  
+app/controllers/public/customers_controller.rb:37:in `delete_params'
+app/controllers/public/customers_controller.rb:24:in `withdraw'
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Update (3.1ms)[0m  [1m[33mUPDATE "customers" SET "is_deleted" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["is_deleted", 1], ["updated_at", "2021-11-01 10:32:28.520871"], ["id", 1]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/public/customers/unsubscribe" for 117.108.18.169 at 2021-11-01 10:34:43 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::CustomersController#unsubscribe as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 701ms (Views: 675.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/public/customers/withdraw" for 117.108.18.169 at 2021-11-01 10:34:47 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#withdraw as HTML
+  Parameters: {"authenticity_token"=>"Ft6esIu/j4aLr/1qW3FEIStJ+gznf76L0AJj7/YhifAKQQvTYciA7IHMXR1hf+vNoYeajPi1z1p9Xb6XpU0AlQ=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ (pry):1
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ (pry):1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):4
+  [1m[36mCustomer Update (1.3ms)[0m  [1m[33mUPDATE "customers" SET "is_deleted" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["is_deleted", 1], ["updated_at", "2021-11-01 10:36:26.821834"], ["id", 3]]
+  ↳ (pry):4
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):4
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:22
+Completed 400 Bad Request in 277865ms (ActiveRecord: 9.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: customer):
+  
+app/controllers/public/customers_controller.rb:37:in `delete_params'
+app/controllers/public/customers_controller.rb:24:in `withdraw'
+Started GET "/public/customers/unsubscribe" for 117.108.18.169 at 2021-11-01 10:40:01 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::CustomersController#unsubscribe as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:17
+  Rendering public/customers/unsubscribe.html.erb within layouts/application
+  Rendered public/customers/unsubscribe.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 753ms (Views: 726.2ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/public/customers/withdraw" for 117.108.18.169 at 2021-11-01 10:40:04 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#withdraw as HTML
+  Parameters: {"authenticity_token"=>"gvlFnh575FbFEAyvpx8NXMCjm8pwc81DqeJ85U6WlWWeZtD99AzrPM9zrNidEaKwSm37Sm+5vJIEvaGdHfocAA=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:21
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/customers_controller.rb:23
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-01 10:40:05 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:38
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:55
+  Rendered public/homes/top.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 174ms (Views: 154.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/customers/sign_up" for 117.108.18.169 at 2021-11-01 10:40:12 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#new as HTML
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.5ms)
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/registrations/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 109ms (Views: 107.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+Started GET "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:41:31 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (1.0ms)
+  Rendered public/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 658ms (Views: 637.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:41:43 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"shBzU+j6wGFM3hteJI8hPlp6YaihqRRdAGZPbKDJaJjQ6BVJCOQDW1eLXRtyYYlGlS+TwnKRT51N6++VismSrA==", "customer"=>{"email"=>"b@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "b@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:32
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "b@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/public/customers/my_page
+Completed 302 Found in 619ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/public/customers/my_page" for 117.108.18.169 at 2021-11-01 10:41:44 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/public/customers_controller.rb:3
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 101ms (Views: 96.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/customers/sign_out" for 117.108.18.169 at 2021-11-01 10:44:03 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iT3qhabwIjYhhQXsZsFtgazI6Jzl3oKf07f1exhWQts7OglAM/ZOcnjBKoX533/v9GuMLDMOw/0rKMPPdeb6xA=="}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 31ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-01 10:44:03 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:38
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:55
+  Rendered public/homes/top.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 696ms (Views: 683.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/customers/sign_up" for 117.108.18.169 at 2021-11-01 10:44:09 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#new as HTML
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.5ms)
+  Rendered public/shared/_links.html.erb (0.8ms)
+  Rendered public/registrations/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 115ms (Views: 114.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:44:12 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (1.0ms)
+  Rendered public/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 103ms (Views: 101.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:44:22 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3g2FKhYrTH4J3moY12ioOYmgIaUiEal27lK/sEAn/qcEKDYDTY9C6OoqAXTHMIkQOMAaUFMExRUHoYEyQCBrJA==", "customer"=>{"email"=>"b@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "b@gmail.com"], ["LIMIT", 1]]
+  ↳ (pry):2
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "b@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:33
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "b@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/public/customers/my_page
+Completed 302 Found in 422896ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:51:51 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 776ms (Views: 754.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:52:04 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e/5VtYxIC/3AXqsbQhu9ctcDLnD9CPAJ83ACXNRZJPlKAql5BaKM3sobjJb97G3gZIQmUOeOEh+87UmMV0s0Ow==", "customer"=>{"email"=>"b@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "b@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:32
+Completed 500 Internal Server Error in 547ms (ActiveRecord: 0.2ms)
+
+
+  
+NameError (undefined local variable or method `new_customers_sessions_path' for #<Public::SessionsController:0x00007fa25582e098>
+Did you mean?  new_customer_session_path
+               new_customer_session_url
+               new_customer_password_path):
+  
+app/controllers/public/sessions_controller.rb:35:in `reject_inactive_customer'
+Started GET "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:53:53 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (1.3ms)
+  Rendered public/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 664ms (Views: 642.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:54:03 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m3R1/uRngPEbV5KRqYfIJkvCl1ir3PRKDEgn04N9lbmqiIkybY0H0hEStRwWcBi0+EWfeLFaFlxD1WwDAG+Few==", "customer"=>{"email"=>"b@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "b@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/public/sessions_controller.rb:32
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/customers/sign_in
+Filter chain halted as :reject_inactive_customer rendered or redirected
+Completed 302 Found in 309ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/sign_in" for 117.108.18.169 at 2021-11-01 10:54:04 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 113ms (Views: 111.9ms | ActiveRecord: 0.0ms)
+
+
