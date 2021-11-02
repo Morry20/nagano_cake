@@ -1,6 +1,5 @@
-
 <div class="row">
-  <table class="table col-2 m-3">
+  <table class="table col-2 mt-3">
     <thead>
       <tr>
         <th>ジャンル検索</th>
@@ -13,19 +12,10 @@
     </tbody>
   </table>
 
-  <div class="col-9 m-3">
-    <p class="mx-auto">ようこそ、ながのCAKEへ！<br>
-    このサイトは、ケーキ販売のECサイトになります。<br>
-    会員でない方も商品の閲覧はできますが、<br>
-    購入には会員登録が必要になります。
-    </p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-10 offset-2">
+  <div class="col-10 mt-3">
+    <span class="h3 bg-light mt-3">商品一覧(全<%= @items_count %>件)</span>
     <div><% @items.each do |item| %>
-      <ul class="col-3 m-3 d-inline-block list-inline">
+      <ul class="col-3 d-inline-block list-inline">
         <li><%= attachment_image_tag item, :image , :fill, 150, 150, format: 'jpeg',fallback: "no_image.jpg" %></li>
         <li><%= item.name %></li>
         <li><%= item.price %></li>
@@ -33,3 +23,4 @@
     </div>
   </div>
 </div>
+

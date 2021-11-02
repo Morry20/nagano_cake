@@ -45,6 +45,8 @@ Rails.application.routes.draw do
 
       resources :addresses , except:[:new,:show]
 
+      resources :items , only:[:index,:show]
+
   end
 
 end
