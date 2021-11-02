@@ -43,6 +43,8 @@ Rails.application.routes.draw do
 
       patch 'public/customers/withdraw' => 'customers#withdraw'
 
+      resources :addresses , except:[:new,:show]
+
   end
 
 end
