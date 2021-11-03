@@ -9,5 +9,11 @@ class Public::ItemsController < ApplicationController
     @genres = Genre.all
     @item = Item.find(params[:id])
   end
-
+  
+  private
+  
+    def items_params
+      params.require(:item).permit(:name, :image, :introduction, :price, :is_active, :genre_id)
+    end
+  
 end

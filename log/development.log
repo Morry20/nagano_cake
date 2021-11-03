@@ -8613,3 +8613,611 @@ Processing by Public::ItemsController#index as HTML
 Completed 200 OK in 116ms (Views: 115.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 117.108.18.169 at 2021-11-03 07:19:54 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:10
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:27
+  Rendered public/homes/top.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 791ms (Views: 768.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/attachments/81e48bb48fea86083a33c55a3a970d7da0dfe009/store/fill/150/150/de84ddfebfa3daa8aa51a3c30c69d1a0c7bd94f2877a982b1fba76c4d98e/image.jpeg" for 117.108.18.169 at 2021-11-03 07:19:55 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/97a3b97e336922736f01af69ce8b094cbd288237/store/fill/150/150/31b91b2d53841cf81e898d1b106d8a4228c26752e5f685178e37f5b25927/image.jpeg" for 117.108.18.169 at 2021-11-03 07:19:55 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/494f4493cba85fab460afb18ba3f1126373f2994/store/fill/150/150/580cbd923ac4b7e75b40f852bbbe6b17aa2093cac28f05a801c998779d13/image.jpeg" for 117.108.18.169 at 2021-11-03 07:19:55 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-03 07:19:55 +0000] GET "/494f4493cba85fab460afb18ba3f1126373f2994/store/fill/150/150/580cbd923ac4b7e75b40f852bbbe6b17aa2093cac28f05a801c998779d13/image.jpeg" 200 158.3ms
+
+Refile::App: [2021-11-03 07:19:55 +0000] GET "/97a3b97e336922736f01af69ce8b094cbd288237/store/fill/150/150/31b91b2d53841cf81e898d1b106d8a4228c26752e5f685178e37f5b25927/image.jpeg" 200 225.1ms
+
+Refile::App: [2021-11-03 07:19:55 +0000] GET "/81e48bb48fea86083a33c55a3a970d7da0dfe009/store/fill/150/150/de84ddfebfa3daa8aa51a3c30c69d1a0c7bd94f2877a982b1fba76c4d98e/image.jpeg" 200 239.9ms
+
+Started GET "/admin/items" for 117.108.18.169 at 2021-11-03 07:20:05 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:16
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:21
+  Rendered admin/items/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 139ms (Views: 137.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/items/1" for 117.108.18.169 at 2021-11-03 07:20:06 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:18
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 144ms (Views: 139.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/d37f07c4cba8e9cd97b7495a0c188dbf385e014c/store/fill/350/350/4c15df51631abfb9b6b96b5c4c84a619474b473939a1c4ca3eb1d92484f7/image.jpeg" for 117.108.18.169 at 2021-11-03 07:20:06 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-03 07:20:07 +0000] GET "/d37f07c4cba8e9cd97b7495a0c188dbf385e014c/store/fill/350/350/4c15df51631abfb9b6b96b5c4c84a619474b473939a1c4ca3eb1d92484f7/image.jpeg" 200 79.1ms
+
+Started GET "/items" for 117.108.18.169 at 2021-11-03 07:20:26 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/index.html.erb:9
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:17
+  Rendered public/items/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 191ms (Views: 189.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 117.108.18.169 at 2021-11-03 07:42:45 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/index.html.erb:9
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:17
+  Rendered public/items/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 134ms (Views: 125.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/items/show/1" for 117.108.18.169 at 2021-11-03 07:43:34 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/items/show/1"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items/1/show" for 117.108.18.169 at 2021-11-03 07:44:03 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/items/1/show"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items" for 117.108.18.169 at 2021-11-03 07:59:59 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/index.html.erb:9
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:17
+  Rendered public/items/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 634ms (Views: 620.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/items/1" for 117.108.18.169 at 2021-11-03 08:00:02 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:10
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/show.html.erb:9
+  Rendered public/items/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 206ms (Views: 203.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/89b8d46d3c7ab57f45f1055e0a67cee38cd89e51/store/fill/250/250/4c15df51631abfb9b6b96b5c4c84a619474b473939a1c4ca3eb1d92484f7/image.jpeg" for 117.108.18.169 at 2021-11-03 08:00:02 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-03 08:00:02 +0000] GET "/89b8d46d3c7ab57f45f1055e0a67cee38cd89e51/store/fill/250/250/4c15df51631abfb9b6b96b5c4c84a619474b473939a1c4ca3eb1d92484f7/image.jpeg" 200 177.8ms
+
+Started GET "/items/1" for 117.108.18.169 at 2021-11-03 08:05:32 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:10
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/show.html.erb:9
+  Rendered public/items/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 120ms (Views: 117.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 117.108.18.169 at 2021-11-03 08:06:23 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:10
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/show.html.erb:9
+  Rendered public/items/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 113ms (Views: 111.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 117.108.18.169 at 2021-11-03 08:06:47 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:10
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/show.html.erb:9
+  Rendered public/items/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 108ms (Views: 105.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 117.108.18.169 at 2021-11-03 08:09:00 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:10
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/show.html.erb:9
+  Rendered public/items/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 145ms (Views: 135.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items/1" for 117.108.18.169 at 2021-11-03 08:09:30 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:10
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/show.html.erb:9
+  Rendered public/items/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 104ms (Views: 101.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 117.108.18.169 at 2021-11-03 08:09:50 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:10
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/show.html.erb:9
+  Rendered public/items/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 210ms (Views: 208.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 117.108.18.169 at 2021-11-03 08:27:01 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:10
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/show.html.erb:9
+  Rendered public/items/show.html.erb within layouts/application (236.8ms)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `converting_to_jpy' for #<#<Class:0x00007ff635c6fc18>:0x00007ff635c6e0e8>
+Did you mean?  convert_to_model):
+    20:     <h3 class="b m-2"><%= @item.name %></h3>
+    21:     <p class="m-2"><%= @item.introduction %></p>
+    22:     <div class="row m-2">
+    23:       <price class="h3"><%= converting_to_jpy(@item.price) %></price>
+    24:       <p>(税抜き)</p>
+    25:     </div>
+    26:   </div>
+  
+app/views/public/items/show.html.erb:23:in `_app_views_public_items_show_html_erb__1732695662807109024_70347720425920'
+Started GET "/items" for 117.108.18.169 at 2021-11-03 08:27:27 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/index.html.erb:9
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:17
+  Rendered public/items/index.html.erb within layouts/application (265.7ms)
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `converting_to_jpy' for #<#<Class:0x00007ff6359974a0>:0x00007ff635995448>
+Did you mean?  convert_to_model):
+    18:       <ul class="col-3 d-inline-block list-inline">
+    19:         <li><%= link_to attachment_image_tag(item, :image , :fill, 150, 150, format: 'jpeg',fallback: "no_image.jpg"),item_path(item.id) %></li>
+    20:         <li><%= item.name %></li>
+    21:         <li><%= converting_to_jpy(item.price) %></li>
+    22:       </ul><% end %>
+    23:     </div>
+    24:   </div>
+  
+app/views/public/items/index.html.erb:21:in `block in _app_views_public_items_index_html_erb___2412226861068611194_70347718966920'
+app/views/public/items/index.html.erb:17:in `_app_views_public_items_index_html_erb___2412226861068611194_70347718966920'
+Started GET "/items" for 117.108.18.169 at 2021-11-03 08:29:45 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/index.html.erb:9
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:17
+  Rendered public/items/index.html.erb within layouts/application (174.7ms)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `converting_to_jpy' for #<#<Class:0x0000000006f3f538>:0x0000000006f47828>
+Did you mean?  convert_to_model):
+    18:       <ul class="col-3 d-inline-block list-inline">
+    19:         <li><%= link_to attachment_image_tag(item, :image , :fill, 150, 150, format: 'jpeg',fallback: "no_image.jpg"),item_path(item.id) %></li>
+    20:         <li><%= item.name %></li>
+    21:         <li><%= converting_to_jpy(item.price) %></li>
+    22:       </ul><% end %>
+    23:     </div>
+    24:   </div>
+  
+app/views/public/items/index.html.erb:21:in `block in _app_views_public_items_index_html_erb___2412226861068611194_58313460'
+app/views/public/items/index.html.erb:17:in `_app_views_public_items_index_html_erb___2412226861068611194_58313460'
+Started GET "/admin/items/1" for 117.108.18.169 at 2021-11-03 08:29:48 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:18
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 146ms (Views: 141.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/d37f07c4cba8e9cd97b7495a0c188dbf385e014c/store/fill/350/350/4c15df51631abfb9b6b96b5c4c84a619474b473939a1c4ca3eb1d92484f7/image.jpeg" for 117.108.18.169 at 2021-11-03 08:29:48 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-03 08:29:48 +0000] GET "/d37f07c4cba8e9cd97b7495a0c188dbf385e014c/store/fill/350/350/4c15df51631abfb9b6b96b5c4c84a619474b473939a1c4ca3eb1d92484f7/image.jpeg" 200 141.0ms
+
+Started GET "/items" for 117.108.18.169 at 2021-11-03 08:29:53 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/index.html.erb:9
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:17
+  Rendered public/items/index.html.erb within layouts/application (152.7ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `converting_to_jpy' for #<#<Class:0x0000000006f3f538>:0x00007ff6358c1ad0>
+Did you mean?  convert_to_model):
+    18:       <ul class="col-3 d-inline-block list-inline">
+    19:         <li><%= link_to attachment_image_tag(item, :image , :fill, 150, 150, format: 'jpeg',fallback: "no_image.jpg"),item_path(item.id) %></li>
+    20:         <li><%= item.name %></li>
+    21:         <li><%= converting_to_jpy(item.price) %></li>
+    22:       </ul><% end %>
+    23:     </div>
+    24:   </div>
+  
+app/views/public/items/index.html.erb:21:in `block in _app_views_public_items_index_html_erb___2412226861068611194_70347718529440'
+app/views/public/items/index.html.erb:17:in `_app_views_public_items_index_html_erb___2412226861068611194_70347718529440'
+Started GET "/" for 117.108.18.169 at 2021-11-03 08:31:27 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:10
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:27
+  Rendered public/homes/top.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 650ms (Views: 624.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-03 08:31:30 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:10
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:27
+  Rendered public/homes/top.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 113ms (Views: 109.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 117.108.18.169 at 2021-11-03 08:31:36 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (6.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/index.html.erb:9
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:17
+  Rendered public/items/index.html.erb within layouts/application (214.5ms)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 6.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `converting_to_jpy' for #<#<Class:0x00007efc6c047210>:0x00007efc6c045708>
+Did you mean?  convert_to_model):
+    18:       <ul class="col-3 d-inline-block list-inline">
+    19:         <li><%= link_to attachment_image_tag(item, :image , :fill, 150, 150, format: 'jpeg',fallback: "no_image.jpg"),item_path(item.id) %></li>
+    20:         <li><%= item.name %></li>
+    21:         <li><%= converting_to_jpy(item.price) %></li>
+    22:       </ul><% end %>
+    23:     </div>
+    24:   </div>
+  
+app/views/public/items/index.html.erb:21:in `block in _app_views_public_items_index_html_erb___4067950113935809479_69811304545480'
+app/views/public/items/index.html.erb:17:in `_app_views_public_items_index_html_erb___4067950113935809479_69811304545480'
+Started GET "/" for 117.108.18.169 at 2021-11-03 08:42:18 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:10
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:27
+  Rendered public/homes/top.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 724ms (Views: 703.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 117.108.18.169 at 2021-11-03 08:42:24 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/controllers/public/homes_controller.rb:6
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/homes/top.html.erb:10
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/homes/top.html.erb:27
+  Rendered public/homes/top.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 108ms (Views: 104.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items" for 117.108.18.169 at 2021-11-03 08:42:33 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/index.html.erb:9
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:17
+  Rendered public/items/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 133ms (Views: 130.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 117.108.18.169 at 2021-11-03 08:42:35 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:10
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/show.html.erb:9
+  Rendered public/items/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 115ms (Views: 108.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/89b8d46d3c7ab57f45f1055e0a67cee38cd89e51/store/fill/250/250/4c15df51631abfb9b6b96b5c4c84a619474b473939a1c4ca3eb1d92484f7/image.jpeg" for 117.108.18.169 at 2021-11-03 08:42:36 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-11-03 08:42:36 +0000] GET "/89b8d46d3c7ab57f45f1055e0a67cee38cd89e51/store/fill/250/250/4c15df51631abfb9b6b96b5c4c84a619474b473939a1c4ca3eb1d92484f7/image.jpeg" 200 135.0ms
+
+Started GET "/admin/items" for 117.108.18.169 at 2021-11-03 08:43:25 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:16
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:21
+  Rendered admin/items/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 116ms (Views: 113.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/items/1" for 117.108.18.169 at 2021-11-03 08:43:26 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:18
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 124ms (Views: 120.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/items/1/edit" for 117.108.18.169 at 2021-11-03 08:43:28 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:22
+  Rendering admin/items/edit.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/items/edit.html.erb:15
+  Rendered admin/items/edit.html.erb within layouts/application (80.9ms)
+Completed 200 OK in 207ms (Views: 203.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/items/1" for 117.108.18.169 at 2021-11-03 08:43:36 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ls2nx8m0brFCcSEgK4HQTXvOTiotIk3SpnELRNtHawgNmfLYux6QSgLAjDA2nzf9c9ee9kQzRlbLJtqWKYYzWQ==", "item"=>{"image"=>"{}", "name"=>"いちごのショートケーキ", "introduction"=>"いちご", "genre_id"=>"1", "price"=>"1200", "is_active"=>"販売中"}, "commit"=>"変更を保存", "id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/items_controller.rb:27
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:27
+  [1m[36mItem Update (1.5ms)[0m  [1m[33mUPDATE "items" SET "image_id" = ?, "price" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["image_id", "4c15df51631abfb9b6b96b5c4c84a619474b473939a1c4ca3eb1d92484f7"], ["price", 1200], ["updated_at", "2021-11-03 08:43:36.911864"], ["id", 1]]
+  ↳ app/controllers/admin/items_controller.rb:27
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/items_controller.rb:27
+Redirected to https://e0d4fbe09ff04e3e8f908431788713b3.vfs.cloud9.us-east-1.amazonaws.com/admin/items/1
+Completed 302 Found in 18ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/admin/items/1" for 117.108.18.169 at 2021-11-03 08:43:37 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:18
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:13
+  Rendered admin/items/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 199ms (Views: 197.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items" for 117.108.18.169 at 2021-11-03 08:43:44 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/index.html.erb:9
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:17
+  Rendered public/items/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 125ms (Views: 123.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 117.108.18.169 at 2021-11-03 08:43:46 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:10
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/show.html.erb:9
+  Rendered public/items/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 113ms (Views: 110.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/1" for 117.108.18.169 at 2021-11-03 08:44:48 +0000
+Cannot render console from 117.108.18.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:10
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/items/show.html.erb:9
+  Rendered public/items/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 132ms (Views: 101.7ms | ActiveRecord: 1.3ms)
+
+
