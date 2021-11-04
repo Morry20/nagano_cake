@@ -21,8 +21,14 @@
     <p class="m-2"><%= @item.introduction %></p>
     <div class="row m-2">
       <price class="h3"><%= converting_to_jpy(@item.price) %></price>
-      <p>(税抜き)</p>
+      <p>(税込)</p>
     </div>
+    <%= form_with model: @cart_item, url: '/cart_items', method: :post, local:true do |f| %>
+      <%= f.hidden_field :item_id, value: @item.id %>
+      <%= f.select :amount, *[1..10] %>
+      <%= f.submit 'カートに入れる' , class: "btn btn-success btn-lg" %>
+    <% end %>
+
   </div>
 
 </div>

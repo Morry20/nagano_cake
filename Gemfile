@@ -73,3 +73,5 @@ gem "refile-mini_magick"
 gem "enum_help"
 
 gem "pry-rails"
+
+gem "pry-byebug"
