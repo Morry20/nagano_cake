@@ -28,7 +28,7 @@
       <ul class="col-3 m-3 d-inline-block list-inline">
         <li><%= attachment_image_tag item, :image , :fill, 150, 150, format: 'jpeg',fallback: "no_image.jpg" %></li>
         <li><%= item.name %></li>
-        <li><%= item.price %></li>
+        <li><%= converting_to_jpy(item.price) %></li>
       </ul><% end %>
     </div>
   </div>

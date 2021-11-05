@@ -1,10 +1,10 @@
 <div class="row">
-  <span class="bg-light h3 mt-3">ショッピングカート</span>
-
+  <span class="bg-light h3 m-3 col-4 text-center">ショッピングカート</span>
+  <%= link_to "カートを空にする", cart_items_path, method: :delete, class:"btn btn-danger col-3 m-3" %>
 </div>
 
 <div class="row">
-  <table class="col-9 table-bordered">
+  <table class="col-11 table-bordered">
     <thead>
       <tr class="bg-light">
         <th>商品名</th>
@@ -15,15 +15,29 @@
       </tr>
     </thead>
 
+    <% @total_price = 0 %>
+
     <tbody><% @cart_items.each do |cart_item| %>
       <tr>
-        <td><%= cart_item.item.name %></td>
+        <td><%= attachment_image_tag cart_item.item, :image , :fill, 50, 50, format: 'jpeg',fallback: "no_image.jpg" %><%= cart_item.item.name %></td>
         <td><%= converting_to_jpy(cart_item.item.price) %></td>
-        <td><%= cart_item.amount %></td>
+        <%= form_with model: cart_item, url:cart_item_path(cart_item.id), method: :patch, local:true do |f| %>
+          <td>
+            <%= f.select :amount, *[1..10], value: params[:amount] %>
+            <%= f.submit "変更", class:"btn btn-success text-white" %>
+          </td>
+        <% end %>
         <td><%= cart_item.subtotal %></td>
         <td class="text-center"><%= link_to "削除する", cart_item_path(cart_item.id), method: :delete, class:"btn btn-danger m-2" %></td>
+        <% @total_price += cart_item.subtotal %>
       </tr><% end %>
     </tbody>
   </table>
+</div>
 
+<div class ="row">
+  <btn class="btn btn-primary col-2 mr-3"><%= link_to "買い物を続ける", items_path, class:"text-white" %></btn>
+  <table class="table-bordered col-2 mr-3 ">
+    <tr><th class="bg-light">合計金額</th><td><%= @total_price %></td></tr>
+  </table>
 </div>
