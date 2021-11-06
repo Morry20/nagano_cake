@@ -3,6 +3,6 @@ class CartItem < ApplicationRecord
   belongs_to :customer
 
   def subtotal
-    item.converting_to_jpy(item.price) * amount
+    item.with_tax_price * amount
   end
 end
