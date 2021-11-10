@@ -1,0 +1,55 @@
+<div class="row">
+  <span class="h3 bg-light">注文情報入力</span>
+</div>
+
+<%= form_with model: @order, url:orders_confirm_path(current_customer.id), method: :post, local:true do |f| %>
+
+  <h3>支払方法</h3>
+  <%= f.radio_button :payment_method, Order.payment_methods.key(0),class:"ms-2" %>
+  <%= f.label :payment_method, Order.payment_methods_i18n[:credit_card],class:"ms-2 h4" %><br>
+
+  <%= f.radio_button :payment_method, Order.payment_methods.key(1),class:"ms-2" %>
+  <%= f.label :payment_method, Order.payment_methods_i18n[:transfer],class:"ms-2 h4" %><br>
+
+  <h3>お届け先</h3>
+  <%= f.radio_button :select_address, 0, class:"ms-2" %>
+  <%= f.label :current_customer_full_address, current_customer.full_address,class:"ms-2 mb-2 h4" %><br>
+
+  <%= f.radio_button :select_address, 1,class:"ms-2" %>
+  <%= f.select :current_customer_address_id, options_from_collection_for_select(Address.all, :id, :full_address),class:"ms-2 mb-2" %><br>
+
+  <%= f.radio_button :select_address, 2,class:"ms-2" %>
+  <%= f.label :current_customer_address_full_address, "新しいお届け先",class:"ms-2 h4 mb-2" %>
+
+  <div class="row g-3 ms-2 align-items-center">
+    <div class="col-auto">
+      <label class="col-form-label">郵便番号(ハイフンなし)</label>
+    </div>
+    <div class="col-auto">
+      <%= f.text_field :postal_code, class:"form-control" %>
+    </div>
+  </div>
+
+  <div class="row g-3 ms-2 align-items-center">
+    <div class="col-auto">
+      <label class="col-form-label">住所</label>
+    </div>
+    <div class="col-auto">
+      <%= f.text_field :address, class:"form-control ms-5" %>
+    </div>
+  </div>
+
+  <div class="row g-3 ms-2 align-items-center">
+    <div class="col-auto">
+      <label class="col-form-label">宛名</label>
+    </div>
+    <div class="col-auto">
+      <%= f.text_field :name, class:"form-control ms-5" %>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <%= f.submit "確認画面へ進む" , class:"col-6 text-white btn btn-primary btn-lg" %>
+  </div>
+
+<% end %>

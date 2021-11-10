@@ -1,17 +1,15 @@
 <div class="row">
-  <span class="bg-light h3 m-3 col-4 text-center">ショッピングカート</span>
-  <%= link_to "カートを空にする", cart_items_path, method: :delete, class:"btn btn-danger col-3 m-3" %>
+  <span class="bg-light h3 m-3 col-4 text-center">注文情報確認</span>
 </div>
 
 <div class="row">
-  <table class="col-11 table-bordered">
+  <table class="col-8 table-bordered">
     <thead>
       <tr class="bg-light">
         <th>商品名</th>
         <th>単価(税込)</th>
         <th>数量</th>
         <th>小計</th>
-        <th> </th>
       </tr>
     </thead>
 
@@ -28,20 +26,30 @@
           </td>
         <% end %>
         <td><%= converting_to_jpy(cart_item.subtotal) %></td>
-        <td class="text-center"><%= link_to "削除する", cart_item_path(cart_item.id), method: :delete, class:"btn btn-danger m-2" %></td>
         <% @total_price += cart_item.subtotal %>
       </tr><% end %>
     </tbody>
   </table>
-</div>
-
-<div class="row">
-  <btn class="btn btn-primary col-2 mr-3"><%= link_to "買い物を続ける", items_path, class:"text-white" %></btn>
-  <table class="table-bordered col-2 mr-3 ">
-    <tr><th class="bg-light">合計金額</th><td><%= converting_to_jpy(@total_price) %></td></tr>
+  
+  <table class="col-3 ms-2 table-bordered">
+    <tr>
+      <th class="bg-light">送料</th><td><%= order.shipping_cost %></td>
+    </tr>
+    <tr>
+      <th class="bg-light">商品合計</th><td><%= @total_price %></td>
+    </tr>
+    <tr>
+      <th class="bg-light">請求金額</th><td><%= @total_price + order.shipping_cost %></td>
+    </tr>
   </table>
+  
 </div>
 
-<div class="row text-center m-3">
-  <btn class="btn btn-success btn-lg"><%= link_to "情報入力に進む", new_order_path %></btn>
+<div class="row m-3">
+  <h3>支払方法</h3>
+  <p><%= </p>
+</div>
+
+<div class="row m-3">
+  <h3>お届け先</h3>
 </div>
