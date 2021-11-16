@@ -6,7 +6,7 @@ class Public::OrdersController < ApplicationController
   end
 
   def confirm
-    binding.pry
+    #binding.pry
     @order = Order.new(order_params)
     @cart_items = current_customer.cart_items
     @order.shipping_cost = 800

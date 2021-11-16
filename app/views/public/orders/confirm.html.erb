@@ -19,37 +19,35 @@
       <tr>
         <td><%= attachment_image_tag cart_item.item, :image , :fill, 50, 50, format: 'jpeg',fallback: "no_image.jpg" %><%= cart_item.item.name %></td>
         <td><%= converting_to_jpy(cart_item.item.with_tax_price) %></td>
-        <%= form_with model: cart_item, url:cart_item_path(cart_item.id), method: :patch, local:true do |f| %>
-          <td>
-            <%= f.select :amount, *[1..10], value: params[:amount] %>
-            <%= f.submit "変更", class:"btn btn-success text-white" %>
-          </td>
-        <% end %>
+        <td><%= cart_item.amount %></td>
         <td><%= converting_to_jpy(cart_item.subtotal) %></td>
         <% @total_price += cart_item.subtotal %>
       </tr><% end %>
     </tbody>
   </table>
-  
-  <table class="col-3 ms-2 table-bordered">
+
+  <table class="col-3 m-2 table-bordered">
     <tr>
-      <th class="bg-light">送料</th><td><%= order.shipping_cost %></td>
+      <th class="bg-light">送料</th><td><%= @order.shipping_cost %></td>
     </tr>
     <tr>
       <th class="bg-light">商品合計</th><td><%= @total_price %></td>
     </tr>
     <tr>
-      <th class="bg-light">請求金額</th><td><%= @total_price + order.shipping_cost %></td>
+      <th class="bg-light">請求金額</th><td><%= @total_price + @order.shipping_cost %></td>
     </tr>
   </table>
-  
+
 </div>
 
 <div class="row m-3">
   <h3>支払方法</h3>
-  <p><%= </p>
+  <p><%= @order.payment_method %></p>
 </div>
 
 <div class="row m-3">
   <h3>お届け先</h3>
+  <p>〒<%= @order.postal_code = current_customer.postal_code %>
+  <%= @order.address = current_customer.address %>
+  <%= @order.name = current_customer.first_name + current_customer.last_name %></p>
 </div>
