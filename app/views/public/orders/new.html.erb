@@ -2,7 +2,7 @@
   <span class="h3 bg-light">注文情報入力</span>
 </div>
 
-<%= form_with model: @order, url:orders_confirm_path(current_customer.id), method: :post, local:true do |f| %>
+<%= form_with model: @order, url:orders_confirm_path, method: :post, local:true do |f| %>
 
   <h3>支払方法</h3>
   <%= f.radio_button :payment_method, Order.payment_methods.key(0),class:"ms-2" %>
