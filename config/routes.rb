@@ -51,11 +51,12 @@ Rails.application.routes.draw do
 
       delete '/cart_items' => 'cart_items#destroy_all'
 
-      resources :orders , except:[:edit,:update,:destroy]
-
       post '/orders/confirm' => 'orders#confirm'
 
       get '/orders/complete' => 'orders#complete'
+
+      resources :orders , except:[:edit,:update,:destroy]
+
 
 
   end

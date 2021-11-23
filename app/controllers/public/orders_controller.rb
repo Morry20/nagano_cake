@@ -48,6 +48,7 @@ class Public::OrdersController < ApplicationController
     end
     OrderDetail.import(item)
 #カートの削除機能をつける
+    current_customer.cart_items.destroy_all
     redirect_to orders_complete_path
   end
 
@@ -56,6 +57,7 @@ class Public::OrdersController < ApplicationController
   end
 
   def show
+    @order =  Order.find(params[:id])
   end
 
   private
