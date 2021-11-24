@@ -1,34 +1,41 @@
-<h2><%= @customer.last_name+first_name %>さんの会員情報編集</h2>
+<h3><%= @customer.full_name %>さんの会員情報編集</h3>
 
-<p>会員ID</p>
-<h4><%= @customer.last_name+first_name %></h4><br>
+<p>会員ID　　　　　　<%= @customer.id %></p><br>
 
 <%= form_with model: @customer, url:admin_customer_path(@customer.id), local:true do |f| %>
 
-<p>氏名</p>
-<% f.text_field :last_name+:first_name %>
+  <p>氏名　　　　　　<%= f.text_field :last_name %><%= f.text_field :first_name %></p>
 
-<p>フリガナ</p>
-<% f.text_field :last_name_kana+:first_name_kana %>
 
-<p>郵便番号</p>
-<% f.text_field :postal_code %>
+  <p>フリガナ　　　　<%= f.text_field :last_name_kana %><%= f.text_field :first_name_kana %></p>
 
-<p>住所</p>
-<% f.text_field :address %>
 
-<p>電話番号</p>
-<% f.text_field :telephone_number %>
+  <p>郵便番号　　　　<%= f.text_field :postal_code %></p>
 
-<p>メールアドレス</p>
-<% f.text_field :email %>
 
-<p>会員ステータス</p>
-<%= f.radio_button :is_deleted, "有効" %>
-<%= f.label :is_deleted, "有効", {value: "有効", style: "display: inline-block;"} %>
-<%= f.radio_button :is_deleted, "退会" %>
-<%= f.label :is_deleted, "退会", {value: "退会", style: "display: inline-block;"} %></br>
+  <p>住所　　　　　　<%= f.text_field :address %></p>
 
-<button type="button" class="btn btn-success btn-lg">
-   <%= f.submit "変更を保存する"  %>
-</button>
+
+  <p>電話番号　　　　<%= f.text_field :telephone_number %></p>
+
+
+  <p>メールアドレス　<%= f.text_field :email %></p>
+
+
+  <p>会員ステータス
+    <% if @customer.is_deleted == true %>
+      <%= f.radio_button :is_deleted, false %>
+      <%= f.label :is_deleted, "有効", {value: "有効", style: "display: inline-block;"} %>
+      <%= f.radio_button :is_deleted, true, checked: true %>
+      <%= f.label :is_deleted, "退会",  {value: "退会", style: "display: inline-block;"}%>
+    <% else %>
+      <%= f.radio_button :is_deleted, false, checked: true %>
+      <%= f.label :is_deleted, "有効", {value: "有効", style: "display: inline-block;"} %>
+      <%= f.radio_button :is_deleted, true %>
+      <%= f.label :is_deleted, "退会", {value: "退会", style: "display: inline-block;"} %>
+    <% end %>
+  </p></br>
+
+  <%= f.submit "変更を保存する",class: "btn btn-success btn-lg" %>
+
+<% end %>
