@@ -75,3 +75,6 @@ gem "enum_help"
 gem "pry-byebug"
 
 gem "activerecord-import"
+
+gem 'kaminari','~> 1.2.1'
+
