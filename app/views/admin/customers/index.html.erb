@@ -1,7 +1,7 @@
-<h2>会員一覧</h2>
+<span class="h3 bg-light m-3">会員一覧</span>
 
-<div class="row">
-   <table class="table col-12">
+<div class="row m-3">
+   <table class="table">
       <thead>
          <tr class="bg-light">
             <th>会員ID</th>
@@ -29,3 +29,5 @@
       </tbody>
    </table>
 </div>
+
+<%= paginate @customers %>

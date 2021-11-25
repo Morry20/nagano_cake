@@ -1,7 +1,7 @@
 <h2>商品一覧</h2>
 
 
-<table>
+<table class="col-12 table">
    <thead>
       <tr>
          <th>商品ID</th>
@@ -15,12 +15,14 @@
    <tbody>
       <% @items.each do |item| %>
          <tr>
-            <th><%= item.id %></th>
-            <th><%= link_to item.name, "/admin/items/#{item.id}" %></th>
-            <th><%= item.price %></th>
-            <th><%= item.genre.name %></th>
-            <th><%= item.is_active %></th>
+            <td><%= item.id %></td>
+            <td><%= link_to item.name, "/admin/items/#{item.id}" %></td>
+            <td><%= item.price %></td>
+            <td><%= item.genre.name %></td>
+            <td><%= item.is_active %></td>
          </tr>
       <% end %>
    </tbody>
 </table>
+
+<%= paginate @items %>
