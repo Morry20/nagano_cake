@@ -1,7 +1,8 @@
-<h2>商品新規登録</h2>
+<span class="h3 bg-light m-3">商品新規登録</span>
 
     <%= form_with model: @item, url:admin_items_path, local:true do |f| %>
-      <h4>商品画像</h4>
+    
+      <h4 class="mt-2">商品画像</h4>
       <%= f.attachment_field :image %>
 
       <h4>商品名</h4>
