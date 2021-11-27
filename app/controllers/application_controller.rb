@@ -10,10 +10,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def after_sign_out_path_for(resource)
-    new_admin_sign_in_path
-  end
-
   private
 
     #sin up時の登録情報追加

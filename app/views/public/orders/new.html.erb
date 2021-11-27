@@ -16,7 +16,7 @@
   <%= f.label :current_customer_full_address, current_customer.full_address,class:"ms-2 mb-2 h4" %><br>
 
   <%= f.radio_button :select_address, 1,class:"ms-2" %>
-  <%= f.select :current_customer_address_id, options_from_collection_for_select(Address.all, :id, :full_address),class:"ms-2 mb-2" %><br>
+  <%= f.select :current_customer_address_id, options_from_collection_for_select(current_customer.addresses, :id, :full_address),class:"ms-2 mb-2" %><br>
 
   <%= f.radio_button :select_address, 2,class:"ms-2" %>
   <%= f.label :current_customer_address_full_address, "新しいお届け先",class:"ms-2 h4 mb-2" %>

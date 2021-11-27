@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  devise_for :admins
+  devise_for :admins,:path => "/admin", controllers: {
+  registrations: "admin/registrations",
+  sessions: 'admin/sessions'
+}
    namespace :admin do
       get '/' => 'homes#top'
 
